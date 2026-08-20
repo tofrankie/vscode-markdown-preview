@@ -287,7 +287,6 @@
   background: rgb(0 0 0 / 0%);
   background-color: var(--borderColor-default);
   border: 0;
-  border-bottom: 1px solid var(--borderColor-muted);
 }
 
 .markdown-body input {
