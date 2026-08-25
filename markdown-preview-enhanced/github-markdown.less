@@ -1505,4 +1505,79 @@
   color: var(--fgColor-accent);
 }
 
+:root:has(body.preview-container[data-preview-theme='light']) {
+  // 无法覆盖行类样式
+  // --vscode-scrollbar-shadow: #ddd !important;
+  // --vscode-scrollbarSlider-background: rgb(100 100 100 / 40%) !important;
+  // --vscode-scrollbarSlider-hoverBackground: rgb(100 100 100 / 70%) !important;
+  // --vscode-scrollbarSlider-activeBackground: rgb(0 0 0 / 60%) !important;
+
+  // 默认滑块 var(--vscode-scrollbarSlider-background)
+  --app-scrollbar-thumb-color: rgb(100 100 100 / 40%);
+
+  // 悬浮滑块 var(--vscode-scrollbarSlider-hoverBackground)
+  --app-scrollbar-thumb-hover-color: rgb(100 100 100 / 70%);
+
+  // 按下滑块 var(--vscode-scrollbarSlider-activeBackground)
+  --app-scrollbar-thumb-active-color: rgb(0 0 0 / 60%);
+
+  // 轨道 var(--vscode-scrollbar-shadow)
+  --app-scrollbar-track-color: #ddd;
+}
+
+:root:has(body.preview-container[data-preview-theme='dark']) {
+  // 无法覆盖行类样式
+  // --vscode-scrollbar-shadow: rgb(0 0 0 / 0%) !important;
+  // --vscode-scrollbarSlider-background: rgb(222 220 213 / 6%) !important;
+  // --vscode-scrollbarSlider-hoverBackground: rgb(222 220 213 / 31%) !important;
+  // --vscode-scrollbarSlider-activeBackground: rgb(222 220 213 / 31%) !important;
+
+  // 默认滑块 var(--vscode-scrollbarSlider-background)
+  --app-scrollbar-thumb-color: rgb(222 220 213 / 6%);
+
+  // 悬浮滑块 var(--vscode-scrollbarSlider-hoverBackground)
+  --app-scrollbar-thumb-hover-color: rgb(222 220 213 / 31%);
+
+  // 按下滑块 var(--vscode-scrollbarSlider-activeBackground)
+  --app-scrollbar-thumb-active-color: rgb(222 220 213 / 31%);
+
+  // 轨道 var(--vscode-scrollbar-shadow)
+  --app-scrollbar-track-color: rgb(0 0 0 / 0%);
+}
+
+// 支持标准滚动条属性时优先使用标准写法
+// scrollbar-color 只支持 thumb 和 track 两种颜色，不支持 hover/active 独立颜色
+@supports (scrollbar-color: auto) {
+  html {
+    scrollbar-color: var(--app-scrollbar-thumb-color) var(--app-scrollbar-track-color) !important;
+    scrollbar-width: thin;
+  }
+}
+
+// 不支持标准滚动条属性时，才使用 Chromium/WebKit 伪元素回退
+@supports not (scrollbar-color: auto) {
+  ::-webkit-scrollbar,
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-track-piece,
+  ::-webkit-scrollbar-corner,
+  ::-webkit-scrollbar-button,
+  ::-webkit-resizer {
+    background: var(--app-scrollbar-track-color) !important;
+    box-shadow: none !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--app-scrollbar-thumb-color) !important;
+    border-radius: 999px !important;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--app-scrollbar-thumb-hover-color) !important;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background-color: var(--app-scrollbar-thumb-active-color) !important;
+  }
+}
+
 /* watch trigger test */
