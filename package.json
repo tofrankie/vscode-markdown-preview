@@ -18,12 +18,12 @@
   },
   "devDependencies": {
     "@tofrankie/eslint": "^0.5.0",
-    "@tofrankie/github-markdown-css": "^0.0.5",
-    "@tofrankie/prettier": "^0.2.0",
-    "@tofrankie/stylelint": "^0.4.0",
-    "chokidar": "^5.0.0",
-    "eslint": "^10.8.0",
-    "prettier": "^3.9.6",
-    "stylelint": "^17.14.1"
+    "@tofrankie/github-markdown-css": "^0.0.8",
+    "@tofrankie/prettier": "^0.3.0",
+    "@tofrankie/stylelint": "^0.5.0",
+    "chokidar": "^6.0.0",
+    "eslint": "^10.15.0",
+    "prettier": "^3.10.1",
+    "stylelint": "^17.16.0"
   }
 }

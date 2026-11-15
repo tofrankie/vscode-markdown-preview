@@ -280,7 +280,7 @@
 
 .markdown-body hr {
   box-sizing: content-box;
-  height: 0.25em;
+  height: 1px;
   padding: 0;
   margin: var(--base-size-24) 0;
   overflow: hidden;

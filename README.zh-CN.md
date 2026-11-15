@@ -32,8 +32,8 @@
 
 ## 对比
 
-| 🔄 Original                      | 🆕 Now                      |
-| -------------------------------- | --------------------------- |
+| 🔄 Original | 🆕 Now |
+| --- | --- |
 | ![](./images/light-original.png) | ![](./images/light-new.png) |
 
 ## TODO

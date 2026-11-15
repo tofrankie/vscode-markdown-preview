@@ -34,8 +34,8 @@ Example `settings.json`:
 
 ## Comparison
 
-| 🔄 Original                      | 🆕 Now                      |
-| -------------------------------- | --------------------------- |
+| 🔄 Original | 🆕 Now |
+| --- | --- |
 | ![](./images/light-original.png) | ![](./images/light-new.png) |
 
 ## TODO
